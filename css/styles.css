@@ -1,0 +1,220 @@
+/*https://i.pinimg.com/originals/ec/99/a9/ec99a9e154007903b54c135c734f0b74.gif
+https://i.pinimg.com/originals/33/0c/f4/330cf430387f41c59ed551cdba31030d.gif*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/img/pixelcut-export.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "/fuentes/Witch Magic Italic.ttf";
+    src: url("/fuentes/Witch Magic Italic.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: "/fuentes/Shrikhand-Regular.ttf";
+    src: url("/fuentes/Shrikhand-Regular.ttf") format('truetype');
+}
+
+/* Estilos del botón del menú hamburguesa */
+.hamburguer-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Cambia de right a left */
+    background-color: transparent;
+    border: none;
+    font-size: 40px; /* Reduce el tamaño del icono */
+    cursor: pointer;
+    color: white;
+}
+
+/* Ocultar el menú inicialmente */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Reduce el ancho del menú */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+/* Estilos del botón para cerrar el menú */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px; /* Reduce el tamaño del icono */
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos de los enlaces del menú */
+.navegador ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navegador ul li {
+    margin: 10px 0; /* Reduce el margen entre los items */
+}
+
+.navegador ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Reduce el tamaño del texto */
+    transition: color 0.3s;
+}
+
+.navegador ul li a:hover {
+    color: #F7C826;
+}
+
+/* Mostrar el menú cuando esté activo */
+.menu-overlay.active {
+    display: flex;
+}
+
+/* Ocultar el checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Mostrar el menú si el checkbox está marcado */
+.menu-toggle:checked ~ .menu-overlay {
+    display: flex;
+}
+
+/* Ocultar el icono de las tres barras cuando el menú esté abierto */
+.menu-toggle:checked + .hamburguer-menu {
+    display: none;
+}
+
+.imagen {
+    margin: 2%;
+    display: inline-block;
+    width: 46%;
+    height: auto;
+    animation: entrar 1.5s ease-out forwards, flotar 3s ease-in-out infinite 1.5s;
+}
+
+.imagen img {
+    padding-top: 3%;
+    width: 180px;
+    height: 250px;
+}
+
+@keyframes entrar {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main {
+    width: 90%;
+}
+
+.menu {
+    padding-top: 7%; /* Aumenta el valor de padding-top */
+    width: 46%;
+    height: auto;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.menu img {
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+}
+.menu p {
+    font-size: 1.5rem;
+    width: 95%;
+    text-align: center;
+    padding-left: 6%;
+}
+
+.imagen img {
+    width: 95%;
+    height: auto;
+}
+
+.inicio img{
+    width: 30%;
+    height: auto;
+    margin-top: 2%;
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        background-size: cover;
+        padding: 2rem;
+    }
+
+    .navbar {
+        width: 80%;
+    }
+
+    .imagen {
+        width: 90%;
+        padding-top: 10%;
+        animation: entrar 1.5s ease-out forwards, flotar 3s ease-in-out infinite 1.5s;
+    }
+    
+    .imagen img {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu {
+        width: 90%;
+        padding-top: 5%;
+    }
+
+    .menu img {
+        width: 70%;
+    }
+
+    .inicio img {
+        width: 50%;
+    }
+
+}

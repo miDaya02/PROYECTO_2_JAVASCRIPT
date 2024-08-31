@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "/fuentes/GUNPLAY_.ttf";
+    src: url("/fuentes/GUNPLAY_.ttf") format('truetype');
+}
+
+.menu {
+    font-family: "/fuentes/GUNPLAY_.ttf", "sans-serif";
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: "/fuentes/batmfo__.ttf";
+    src: url("/fuentes/batmfo__.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: "fuentes/neoneon.ttf";
+    src: url("/fuentes/neoneon.ttf") format('truetype');
+}
+
+body {
+    background-image: url("/img/3AM (4).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del botón del menú hamburguesa */
+.hamburguer-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Cambia de right a left */
+    background-color: transparent;
+    border: none;
+    font-size: 40px; /* Reduce el tamaño del icono */
+    cursor: pointer;
+    color: white;
+    z-index: 5;
+}
+
+/* Ocultar el menú inicialmente */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Reduce el ancho del menú */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+/* Estilos del botón para cerrar el menú */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px; /* Reduce el tamaño del icono */
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos de los enlaces del menú */
+.navegador ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navegador ul li {
+    margin: 10px 0; /* Reduce el margen entre los items */
+}
+
+.navegador ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Reduce el tamaño del texto */
+    transition: color 0.3s;
+}
+
+.navegador ul li a:hover {
+    color: #F7C826;
+}
+
+/* Mostrar el menú cuando esté activo */
+.menu-overlay.active {
+    display: flex;
+}
+
+/* Ocultar el checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Mostrar el menú si el checkbox está marcado */
+.menu-toggle:checked ~ .menu-overlay {
+    display: flex;
+}
+
+/* Ocultar el icono de las tres barras cuando el menú esté abierto */
+.menu-toggle:checked + .hamburguer-menu {
+    display: none;
+}
+
+.informacion {
+    position: absolute;
+    width: 100vw; 
+    height: 100vh; 
+    margin: 0;
+    gap: 2em; 
+    padding-top: 3%;
+}
+
+.informacion h1 {
+    font-family: "/fuentes/batmfo__.ttf", "sans-serif";
+    text-align: center;
+    color: #470d0d;
+    font-size: 5em;
+}
+
+.informacion p {
+    font-size: 1.6em;
+    width: 43%;
+    margin-top: 4%;
+    margin-left: 5%;
+    text-align: justify;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.informacion p span{
+    font-size: 1.2em;
+    color: white;;
+    text-align: justify;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.informacion video {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8em 0;
+    }
+
+    .brand {
+        margin: 10px 0;
+    }
+
+    .wrapper {
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li a {
+        padding: 0.8rem 0;
+    }
+
+    .informacion {
+        padding: 2rem;
+        
+    }
+
+    .informacion h1 {
+        font-size: 3em;
+    }
+
+    .informacion p {
+        width: 100%; 
+        margin: 2% 0; 
+        text-align: left; 
+        font-size: 1.2em; 
+    }
+
+    .informacion p span {
+        display: block; 
+        margin-left: 0; 
+    }
+
+    .informacion video {
+        max-width: 100%; 
+    }
+}
+

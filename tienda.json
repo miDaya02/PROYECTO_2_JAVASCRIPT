@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nombre": "Album 2022",
+        "precio": 10.99,
+        "imagen": "/img/Post de Instagram Tienda de Moda Urbana Naranja Gris Negro.png",
+        "categoria": "Categoría 1"
+    },
+    {
+        "id": 2,
+        "nombre": "Album Vol.2",
+        "precio": 20.99,
+        "imagen": "/img/1.png",
+        "categoria": "Categoría 2"
+    },
+    {
+        "id": 3,
+        "nombre": "Sueter",
+        "precio": 30.99,
+        "imagen": "/img/3.png",
+        "categoria": "Categoría 3"
+    },
+    {
+        "id": 4,
+        "nombre": "Gorra",
+        "precio": 30.99,
+        "imagen": "/img/2.png",
+        "categoria": "Categoría 4"
+    },
+    {
+        "id": 5,
+        "nombre": "Blusa",
+        "precio": 30.99,
+        "imagen": "/img/4.png",
+        "categoria": "Categoría 5"
+    },
+    {
+        "id": 6,
+        "nombre": "Blusa",
+        "precio": 30.99,
+        "imagen": "/img/5.png",
+        "categoria": "Categoría 5"
+    }
+]

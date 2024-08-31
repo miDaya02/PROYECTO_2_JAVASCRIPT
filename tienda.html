@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3AM</title>
+    <link rel="stylesheet" href="/css/diseño.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="tittle" style="color: white;">Tienda</h1>
+        <input type="text" id="busqueda" placeholder="Buscar productos...">
+    </header>
+
+    <div id="productos-container">
+        <!-- Aquí se mostrarán los productos de la tienda -->
+    </div>
+
+    <!-- Div del carrito oculto por defecto -->
+    <div id="productos-carrito" class="carrito">
+        <h2>Carrito de Compras</h2>
+        <div id="productos-carrito-lista"></div>
+        <div id="total-carrito">Total: $0.00</div>
+        <button id="comprar-carrito">Comprar</button>
+        <div id="mensaje-confirmacion"></div>
+    </div>
+
+    <!-- Imagen para mostrar/ocultar el carrito -->
+    <div id="carrito-toggle" class="carrito-toggle">
+        <img src="https://w7.pngwing.com/pngs/714/374/png-transparent-computer-icons-shopping-cart-shopping-cart-angle-desktop-wallpaper-online-shopping.png" alt="Carrito">
+    </div>
+
+    <script src="tienda.js"></script>
+</body>
+
+</html>
