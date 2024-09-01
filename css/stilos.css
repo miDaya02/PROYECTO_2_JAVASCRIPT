@@ -206,3 +206,42 @@ body {
     }
 }
 
+@media (max-width: 700px) {
+    .hamburguer-menu {
+        font-size: 30px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .menu-overlay {
+        width: 200px;
+    }
+
+    .close-menu {
+        font-size: 25px;
+    }
+
+    .navegador ul li a {
+        font-size: 16px;
+    }
+
+    .informacion {
+        padding: 2rem;
+    }
+
+    .informacion h1 {
+        font-size: 3em;
+    }
+
+    .informacion p {
+        font-size: 1.2em;
+    }
+
+    .informacion p span {
+        font-size: 1em;
+    }
+
+    .informacion video {
+        max-width: 100%;
+    }
+}
